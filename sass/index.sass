@@ -1,3 +1,59 @@
 body
   padding: 0
   margin: 0
+
+//Parallax banner for landing
+#banner
+  height: 50vh
+  width: 100%
+  background-color: grey
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: relative
+  font-size: 3em
+  background-image: url('../images/banner.jpg')
+  background-size: cover
+  background-position: center
+  filter: grayscale(25%)
+  cursor: default
+
+//Main content of page
+//Content-container
+#content
+  width: calc(100% - 10vw)
+  height: 150vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  position: relative
+  overflow-y: hidden
+  padding: 0 5vw 0 5vw
+  background-color: rgb(245, 245, 245)
+
+//Classes for content-container
+.body-text
+  margin-top: 10vh
+  width: 33vw
+  height: auto
+
+.body-text-right
+  margin-left: 33vw
+
+//Icon for arrow at top of content div
+#arrow-decorator
+  position: absolute
+  top: -2vw
+  width: 4vw
+  height: 4vw
+  background-color: lightgrey
+  border-radius: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+#arrow-decorator-png
+  margin-top: 40%
