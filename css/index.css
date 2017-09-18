@@ -289,3 +289,27 @@ body {
 
 #row-4-text {
   background-color: rgba(250, 250, 250, 0.7); }
+
+@-webkit-keyframes contact-bar-down {
+  0% {
+    background-color: #4286f4; }
+  100% {
+    background-color: rgba(112, 166, 255, 0.7); } }
+
+@keyframes contact-bar-down {
+  0% {
+    background-color: #4286f4; }
+  100% {
+    background-color: rgba(112, 166, 255, 0.7); } }
+
+@-webkit-keyframes contact-bar-up {
+  0% {
+    background-color: rgba(112, 166, 255, 0.7); }
+  100% {
+    background-color: #4286f4; } }
+
+@keyframes contact-bar-up {
+  0% {
+    background-color: rgba(112, 166, 255, 0.7); }
+  100% {
+    background-color: #4286f4; } }

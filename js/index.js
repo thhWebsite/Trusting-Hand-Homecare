@@ -20,29 +20,27 @@ $(window).scroll( function() {
   })
 
   //Cause contact bar to stickto top of page after scrolling past
-  if((initState.contactBarTop * 0.79) <= ($(window).scrollTop())) {
+  if((initState.contactBarTop * 0.8) <= ($(window).scrollTop())) {
     $('#contact-bar').css({
       'position' : 'fixed',
       'top' : '0',
-      'margin-top' : '0'
+      'margin-top' : '0',
+      'transform' : ''
+      // 'animation' : 'contact-bar-down 2s forwards'
     })
     $('#content').css({
       'margin-top' : '60vh'
     })
-    $('#contact-bar').css({
-      'transform' : ''
-    })
   }
-  if((initState.contactBarTop * 0.79) >= $(window).scrollTop()) {
+  if((initState.contactBarTop * 0.8) >= $(window).scrollTop()) {
     $('#contact-bar').css({
       'position' : '',
-      'margin-top' : '50vh'
+      'margin-top' : '50vh',
+      'transform' : 'translatey(' + $(window).scrollTop()*-0.25 + 'px)'
+      // 'animation' : 'contact-bar-up 1s forwards'
     })
     $('#content').css({
       'margin-top' : '0'
-    })
-    $('#contact-bar').css({
-      'transform' : 'translatey(' + $(window).scrollTop()*-0.25 + 'px)'
     })
   }
 })
