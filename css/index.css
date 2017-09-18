@@ -68,8 +68,8 @@ body {
   font-style: italic; }
 
 #logo {
-  width: 15vw;
-  height: 15vw;
+  width: 200px;
+  height: 200px;
   background-repeat: no-repeat;
   background-image: url("../images/thh-logo.png");
   margin-top: -5vh;
