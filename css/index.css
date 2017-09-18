@@ -93,10 +93,15 @@ body {
   left: -13.5vw; }
 
 #logo-text-hand {
-  right: -14.5vw; }
+  bottom: -30%; }
 
 #logo-text-homecare {
-  bottom: -30%; }
+  right: -14.5vw; }
+
+#quote {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
 
 #content {
   width: 100%;
