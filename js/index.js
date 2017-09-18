@@ -2,9 +2,22 @@ var initState = {
   contactBarTop: $('#contact-bar').offset().top
 }
 
+//Load page properly if scrolled down
+$(document).ready( function() {
+
+  scrollAnimation()
+
+})
+
+
 //Scroll based animatinos for page
 $(window).scroll( function() {
 
+  scrollAnimation()
+
+})
+
+function scrollAnimation() {
   //Based on scroll, will ttranslate the content div up to scroll it over the banner
   $('#content').css({
     'transform' : 'translatey(' + $(window).scrollTop()*-0.25 + 'px)'
@@ -43,4 +56,4 @@ $(window).scroll( function() {
       'margin-top' : '0'
     })
   }
-})
+}

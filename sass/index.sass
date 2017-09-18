@@ -80,7 +80,7 @@ body
   justify-content: flex-start
   overflow-y: hidden
   background-color: rgb(245, 245, 245)
-  margin-bottom: -35vh
+  margin-bottom: -43vh
 
 //Classes for content-container
 .content-row
@@ -92,6 +92,7 @@ body
   padding: 15vh 0 15vh 0
   overflow: hidden
   position: relative
+  z-index: 0
 
 .row-background
   background-size: cover
@@ -120,6 +121,7 @@ body
   text-align: center
   font-family: 'dustismo-bold'
   color: rgba(0, 0, 0, 0.7)
+  margin-bottom: 5%
 
 //Rating styling
 .rating
@@ -127,6 +129,10 @@ body
   color: rgba(0, 0, 0, 0.8)
   font-weight: bold
   text-align: center
+  padding-top: 4%
+  padding-bottom: 2%
+  border-top: solid 1px rgba(150, 150, 150, 0.5)
+  border-bottom: solid 1px rgba(150, 150, 150, 0.5)
 
 .rating-author
   text-align: right
@@ -148,12 +154,26 @@ body
   height: auto
 
 //Rating shaded elements styling
-.shadow-box
-  width: 20%
+.carousel-control-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 15%
   height: 100%
-  background-color: rgba(120, 120, 120, 0.7)
   position: absolute
   top: 0
+  opacity: 0
+  cursor: pointer
+  animation: carousel-control-off .5s forwards
+
+.carousel-control-container:hover
+  animation: carousel-control-on 1s forwards
+
+.carousel-arrow
+  width: 50%
+  height: auto
+
 
 //top bar for contact
 #contact-bar
@@ -180,19 +200,19 @@ body
 
 #row-3
   padding: 25vh 0 25vh 0
-  color: rgba(50, 50, 50, 0.9)
-  font-size: 2.7em
-  text-align: center
+  background-color: rgba(250, 250, 250, 1)
 
 #row-4
   padding: 25vh 0 25vh 0
-  background-color: rgba(0, 0, 0, 0.1)
+  color: rgba(50, 50, 50, 0.9)
+  font-size: 2.7em
+  text-align: center
 
 //Row background-styling
 #row-1-background
   background-image: url('../images/row-1-background.jpg')
 
-#row-3-background
+#row-4-background
   background-image: url('../images/row-3-background.jpg')
 
 //Styling of content of rows
@@ -200,15 +220,20 @@ body
   width: 35%
   background-color: rgba(250, 250, 250, 0.7)
 
-#shadow-box-left
+#carousel-control-left
   left: 0
 
-#shadow-box-right
+#carousel-control-right
   right: 0
 
-#row-4-text
+#carousel-arrow-left
+  transform: rotate(180deg)
+
+#row-3-text
   background-color: rgba(250, 250, 250, 0.7)
 
+#row-4-text
+  font-style: italic
 
 //Animations
 @keyframes contact-bar-down
@@ -222,3 +247,15 @@ body
     background-color: rgba(112, 166, 255, 0.7)
   100%
     background-color: rgb(66, 134, 244)
+
+@keyframes carousel-control-on
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes carousel-control-off
+  0%
+    opacity: 1
+  100%
+    opacity: 0
