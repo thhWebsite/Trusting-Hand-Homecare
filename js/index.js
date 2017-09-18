@@ -16,7 +16,7 @@ $(window).scroll( function() {
   //Based on scroll, will blur and scale the image
   $('#banner').css({
     'transform' : 'scale(' + (1.1 - (0.25*($(window).scrollTop() / $(window).height()))) + ', ' + (1.1 - (0.25*($(window).scrollTop() / $(window).height()))) + ')',
-    'filter' : 'blur(' + (15*($(window).scrollTop() / $(window).height())) + 'px)'
+    'filter' : 'blur(' + (17*($(window).scrollTop() / $(window).height())) + 'px)'
   })
 
   //Cause contact bar to stickto top of page after scrolling past
