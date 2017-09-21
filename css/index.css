@@ -28,6 +28,10 @@ body {
   justify-content: center;
   position: relative; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 #banner {
   height: 50vh;
   width: 100%;
@@ -129,7 +133,7 @@ body {
   justify-content: flex-start;
   overflow-y: hidden;
   background-color: whitesmoke;
-  margin-bottom: -43vh; }
+  margin-bottom: -52vh; }
 
 .content-row {
   display: -webkit-box;
@@ -168,10 +172,11 @@ body {
   width: 22.5vw;
   padding: 1.5vw 1.5vw 2vw 1.5vw;
   height: auto;
-  background-color: rgba(200, 200, 200, 0.7);
+  background-color: rgba(250, 250, 250, 0.7);
   border-radius: 10px;
   color: rgba(0, 0, 0, 0.7);
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-family: sans-serif; }
 
 .body-text-right {
   margin-left: 10vw; }
@@ -181,8 +186,11 @@ body {
   font-size: 2.25em;
   text-align: center;
   font-family: 'dustismo-bold';
-  color: rgba(0, 0, 0, 0.7);
+  color: #056a91;
   margin-bottom: 5%; }
+
+.small-text {
+  font-size: 0.8em; }
 
 .rating {
   width: 45%;
@@ -288,27 +296,31 @@ body {
   color: #282828; }
 
 #row-1 {
-  padding: 15vh 0 15vh 0;
-  background-color: rgba(0, 0, 0, 0.2); }
+  padding: 15vh 0 15vh 0; }
 
 #row-2 {
-  background-color: rgba(65, 137, 219, 0.5);
   background-color: #cee1ff; }
 
 #row-3 {
   padding: 25vh 0 25vh 0;
-  background-color: #fafafa; }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 #row-4 {
   padding: 25vh 0 25vh 0;
   color: rgba(50, 50, 50, 0.9);
   font-size: 2.7em;
-  text-align: center; }
+  text-align: center;
+  background-color: #cee1ff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 #row-1-background {
   background-image: url("../images/row-1-background.jpg"); }
 
-#row-4-background {
+#row-3-background {
   background-image: url("../images/row-3-background.jpg"); }
 
 #mission-text {
@@ -331,6 +343,11 @@ body {
 
 #row-4-text {
   font-style: italic; }
+
+#row-4-call-now {
+  border: solid 2px grey;
+  padding: 0.5%;
+  cursor: pointer; }
 
 @-webkit-keyframes contact-bar-down {
   0% {
