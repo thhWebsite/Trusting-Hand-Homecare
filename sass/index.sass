@@ -21,6 +21,9 @@ a
   text-decoration: none
   color: inherit
 
+p
+  margin: 5px 0 5px 0
+
 //Parallax banner for landing
 #banner
   height: 50vh
@@ -84,16 +87,11 @@ a
   justify-content: flex-start
   overflow-y: hidden
   background-color: rgb(245, 245, 245)
-  margin-bottom: -52vh
+  margin-bottom: -51vh
 
 //Classes for content-container
 .content-row
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: center
   width: 100%
-  padding: 15vh 0 15vh 0
   overflow: hidden
   position: relative
   z-index: 0
@@ -106,6 +104,14 @@ a
   background-position: center
   opacity: 0.3
   z-index: -1
+
+.body-text-container
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 100%
+  padding: 15vh 0 15vh 0
 
 .body-text
   width: 22.5vw
@@ -199,13 +205,11 @@ a
 
 //Rows for content section
 #row-1
-  padding: 15vh 0 15vh 0
 
 #row-2
   background-color: rgb(206, 225, 255)
 
 #row-3
-  padding: 25vh 0 25vh 0
   background-color: rgba(0, 0, 0, 0.1)
 
 #row-4
@@ -245,8 +249,26 @@ a
 
 #row-4-call-now
   border: solid 2px grey
-  padding: 0.5%
+  padding: 1%
   cursor: pointer
+  background-color: white
+
+#row-4-bottom-bar
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 15vh
+  background-color: rgba(130, 130, 130, 1)
+  position: absolute
+  bottom: 0
+
+#address-info
+  right: 2.5vw
+  text-align: center
+  color: rgb(220, 220, 220)
+  font-size: 1.35em
 
 //Animations
 @keyframes contact-bar-down

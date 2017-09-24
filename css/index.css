@@ -32,6 +32,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+p {
+  margin: 5px 0 5px 0; }
+
 #banner {
   height: 50vh;
   width: 100%;
@@ -133,9 +136,24 @@ a {
   justify-content: flex-start;
   overflow-y: hidden;
   background-color: whitesmoke;
-  margin-bottom: -52vh; }
+  margin-bottom: -51vh; }
 
 .content-row {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0; }
+
+.row-background {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1; }
+
+.body-text-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,19 +172,7 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  padding: 15vh 0 15vh 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 0; }
-
-.row-background {
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-position: center;
-  opacity: 0.3;
-  z-index: -1; }
+  padding: 15vh 0 15vh 0; }
 
 .body-text {
   width: 22.5vw;
@@ -295,14 +301,10 @@ a {
   margin-top: 50vh;
   color: #282828; }
 
-#row-1 {
-  padding: 15vh 0 15vh 0; }
-
 #row-2 {
   background-color: #cee1ff; }
 
 #row-3 {
-  padding: 25vh 0 25vh 0;
   background-color: rgba(0, 0, 0, 0.1); }
 
 #row-4 {
@@ -346,8 +348,39 @@ a {
 
 #row-4-call-now {
   border: solid 2px grey;
-  padding: 0.5%;
-  cursor: pointer; }
+  padding: 1%;
+  cursor: pointer;
+  background-color: white; }
+
+#row-4-bottom-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 15vh;
+  background-color: #828282;
+  position: absolute;
+  bottom: 0; }
+
+#address-info {
+  right: 2.5vw;
+  text-align: center;
+  color: gainsboro;
+  font-size: 1.35em; }
 
 @-webkit-keyframes contact-bar-down {
   0% {
