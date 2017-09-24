@@ -296,10 +296,38 @@ p {
   height: 10vh;
   width: 100%;
   background-color: #4286f4;
+  background-color: #e6e6e6;
   font-size: 2em;
   z-index: 500;
   margin-top: 50vh;
   color: #282828; }
+
+.contact-button {
+  width: 15%;
+  height: 70%;
+  border: solid 2px rgba(220, 220, 220, 0.9);
+  background-color: #4286f4;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer; }
+
+#phone-button {
+  margin-left: 10%; }
 
 #row-2 {
   background-color: #cee1ff; }
@@ -310,7 +338,6 @@ p {
 #row-4 {
   padding: 25vh 0 25vh 0;
   color: rgba(50, 50, 50, 0.9);
-  font-size: 2.7em;
   text-align: center;
   background-color: #cee1ff;
   -webkit-box-orient: vertical;
@@ -345,13 +372,15 @@ p {
 
 #row-4-text {
   font-style: italic;
-  margin-top: -7%; }
+  margin: -7% 0 1.5% 0;
+  font-size: 2em; }
 
 #row-4-call-now {
   border: solid 2px grey;
   padding: 1%;
   cursor: pointer;
-  background-color: white; }
+  background-color: white;
+  font-size: 2em; }
 
 #row-4-bottom-bar {
   display: -webkit-box;
