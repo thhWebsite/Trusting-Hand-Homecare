@@ -106,13 +106,13 @@ p {
   bottom: 0; }
 
 #logo-text-trusting {
-  left: -13.5vw; }
+  left: -100%; }
 
 #logo-text-hand {
   bottom: -30%; }
 
 #logo-text-homecare {
-  right: -14.5vw; }
+  right: -100%; }
 
 #content {
   width: 100%;
@@ -344,7 +344,8 @@ p {
   background-color: rgba(250, 250, 250, 0.7); }
 
 #row-4-text {
-  font-style: italic; }
+  font-style: italic;
+  margin-top: -7%; }
 
 #row-4-call-now {
   border: solid 2px grey;
