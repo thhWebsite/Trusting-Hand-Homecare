@@ -37,11 +37,13 @@ p {
 
 #main-wrapper {
   margin-bottom: -19.25vw;
-  overflow: hidden; }
+  overflow: hidden;
+  position: absolute;
+  top: 0; }
 
 #banner {
   height: 25vw;
-  min-height: 25vh;
+  min-height: 350px;
   width: 100%;
   background-color: grey;
   display: -webkit-box;
@@ -180,7 +182,6 @@ p {
 
 .body-text {
   width: 22.5vw;
-  min-width: 30vh;
   padding: 1.5vw 1.5vw 2vw 1.5vw;
   height: auto;
   background-color: rgba(250, 250, 250, 0.7);

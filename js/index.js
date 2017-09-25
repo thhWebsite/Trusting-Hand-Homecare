@@ -1,19 +1,36 @@
-var initState = {
-  contactBarTop: $('#contact-bar').offset().top
-}
-
 //Link functions
 function facebookLink() {
   window.open("https://www.facebook.com/Trusting-Hand-Homecare-1877394315841612/")
 }
 
-//Load page properly if scrolled down
+//object to pass sate along between functions
+var state = {
+  bannerHeight: $("#banner").height(),
+  contactBarHeight: $("#contact-bar").height(),
+  row4Height: $("#row-4").height(),
+  height: $(window).height()
+}
+
+//Load page properly if scrolled down and initiate height for elements
 $(document).ready( function() {
+
+  setHeight()
 
   scrollAnimation()
 
 })
 
+//Function to set heights for elements
+function setHeight() {
+
+  $("#contact-bar").css({
+    'margin-top' : state.bannerHeight + 'px'
+  })
+
+  $(".body-text").css({
+    'min-width' : state.height / 3
+  })
+}
 
 //Scroll based animatinos for page
 $(window).scroll( function() {
@@ -38,24 +55,22 @@ function scrollAnimation() {
   })
 
   //Cause contact bar to stickto top of page after scrolling past
-  if((initState.contactBarTop * 0.8) <= ($(window).scrollTop())) {
+  if((state.bannerHeight * 0.8) <= ($(window).scrollTop())) {
     $('#contact-bar').css({
       'position' : 'fixed',
       'top' : '0',
       'margin-top' : '0',
       'transform' : ''
-      // 'animation' : 'contact-bar-down 2s forwards'
     })
     $('#content').css({
-      'margin-top' : '30vw'
+      'margin-top' : state.bannerHeight + state.contactBarHeight + 'px'
     })
   }
-  if((initState.contactBarTop * 0.8) >= $(window).scrollTop()) {
+  if((state.bannerHeight * 0.8) >= $(window).scrollTop()) {
     $('#contact-bar').css({
       'position' : '',
-      'margin-top' : '25vw',
+      'margin-top' : state.bannerHeight + 'px',
       'transform' : 'translatey(' + $(window).scrollTop()*-0.25 + 'px)'
-      // 'animation' : 'contact-bar-up 1s forwards'
     })
     $('#content').css({
       'margin-top' : '0'
