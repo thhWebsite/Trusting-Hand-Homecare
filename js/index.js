@@ -24,7 +24,8 @@ $(document).ready( function() {
 function setHeight() {
 
   $("#contact-bar").css({
-    'margin-top' : state.bannerHeight + 'px'
+    'margin-top' : state.bannerHeight + 'px',
+    'min-height' : '75px'
   })
 
   $(".body-text").css({
