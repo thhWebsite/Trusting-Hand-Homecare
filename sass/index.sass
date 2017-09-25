@@ -273,7 +273,7 @@ p
 
 #row-4-bottom-bar
   display: flex
-  flex-direction: column
+  flex-direction: row
   align-items: center
   justify-content: center
   width: 100%
@@ -281,12 +281,29 @@ p
   background-color: rgba(130, 130, 130, 1)
   position: absolute
   bottom: 0
+  color: rgb(220, 220, 220)
 
 #address-info
   right: 2.5vw
   text-align: center
-  color: rgb(220, 220, 220)
   font-size: 1.35em
+  position: absolute
+  right: 1%
+
+#facebook-contact-container
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 100%
+  color: rgb(220, 220, 220)
+  font-size: 1.5em
+
+#facebook-contact-icon
+  width: 4vw
+  height: 4vw
+  margin-left: 1%
+  cursor: pointer
 
 //Animations
 @keyframes contact-bar-down

@@ -2,6 +2,11 @@ var initState = {
   contactBarTop: $('#contact-bar').offset().top
 }
 
+//Link functions
+function facebookLink() {
+  window.open("https://www.facebook.com/Trusting-Hand-Homecare-1877394315841612/")
+}
+
 //Load page properly if scrolled down
 $(document).ready( function() {
 

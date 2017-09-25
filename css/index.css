@@ -387,11 +387,11 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -404,13 +404,43 @@ p {
   height: 15vh;
   background-color: #828282;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  color: gainsboro; }
 
 #address-info {
   right: 2.5vw;
   text-align: center;
+  font-size: 1.35em;
+  position: absolute;
+  right: 1%; }
+
+#facebook-contact-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
   color: gainsboro;
-  font-size: 1.35em; }
+  font-size: 1.5em; }
+
+#facebook-contact-icon {
+  width: 4vw;
+  height: 4vw;
+  margin-left: 1%;
+  cursor: pointer; }
 
 @-webkit-keyframes contact-bar-down {
   0% {
