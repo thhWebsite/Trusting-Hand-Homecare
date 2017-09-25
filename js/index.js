@@ -47,13 +47,13 @@ function scrollAnimation() {
       // 'animation' : 'contact-bar-down 2s forwards'
     })
     $('#content').css({
-      'margin-top' : '60vh'
+      'margin-top' : '30vw'
     })
   }
   if((initState.contactBarTop * 0.8) >= $(window).scrollTop()) {
     $('#contact-bar').css({
       'position' : '',
-      'margin-top' : '50vh',
+      'margin-top' : '25vw',
       'transform' : 'translatey(' + $(window).scrollTop()*-0.25 + 'px)'
       // 'animation' : 'contact-bar-up 1s forwards'
     })

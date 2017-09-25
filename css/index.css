@@ -136,7 +136,7 @@ p {
   justify-content: flex-start;
   overflow-y: hidden;
   background-color: whitesmoke;
-  margin-bottom: -48vh; }
+  margin-bottom: -19vw; }
 
 .content-row {
   width: 100%;
@@ -299,7 +299,7 @@ p {
   background-color: #e6e6e6;
   font-size: 2em;
   z-index: 500;
-  margin-top: 50vh;
+  margin-top: 25vw;
   color: #282828; }
 
 .contact-button {
@@ -336,7 +336,6 @@ p {
   background-color: rgba(0, 0, 0, 0.1); }
 
 #row-4 {
-  padding: 25vh 0 25vh 0;
   color: rgba(50, 50, 50, 0.9);
   text-align: center;
   background-color: #cee1ff;
@@ -344,7 +343,8 @@ p {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 5vw; }
 
 #row-1-background {
   background-image: url("../images/row-1-background.jpg"); }
@@ -401,10 +401,8 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  height: 15vh;
+  height: 5vw;
   background-color: #828282;
-  position: absolute;
-  bottom: 0;
   color: gainsboro; }
 
 #address-info {
