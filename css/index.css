@@ -35,6 +35,10 @@ a {
 p {
   margin: 5px 0 5px 0; }
 
+#main-wrapper {
+  margin-bottom: -19.25vw;
+  overflow: hidden; }
+
 #banner {
   height: 25vw;
   min-height: 25vh;
