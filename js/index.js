@@ -8,7 +8,8 @@ var state = {
   bannerHeight: $("#banner").height(),
   contactBarHeight: $("#contact-bar").height(),
   row4Height: $("#row-4").height(),
-  height: $(window).height()
+  height: $(window).height(),
+  width: $(window).width()
 }
 
 //Load page properly if scrolled down and initiate height for elements
@@ -25,7 +26,7 @@ function setHeight() {
 
   $("#contact-bar").css({
     'margin-top' : state.bannerHeight + 'px',
-    'min-height' : '75px'
+    'min-height' : state.height / 10 + 'px'
   })
 
   $(".body-text").css({
