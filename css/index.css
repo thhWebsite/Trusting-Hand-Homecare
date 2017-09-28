@@ -84,6 +84,8 @@ p {
   justify-content: center;
   position: fixed;
   top: 0;
+  left: calc((100vw - 100%) / 2);
+  left: 0;
   font-size: 3.5em;
   background-image: url("../images/banner.jpg");
   background-size: cover;
@@ -104,10 +106,10 @@ p {
       position: block; } }
 
 #logo {
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
   background-repeat: no-repeat;
-  background-image: url("../images/thh-logo.png");
+  background-image: url("../images/thh-logo-text.png");
   margin-top: -2.5vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -127,6 +129,16 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative; }
+  @media screen and (min-width: 1000px) {
+    #logo {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); } }
+  @media screen and (max-width: 600px) {
+    #logo {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); } }
 
 .logo-text {
   text-align: center;
@@ -171,6 +183,9 @@ p {
   overflow: hidden;
   position: relative;
   z-index: 0; }
+  @media screen and (max-width: 640px) {
+    .content-row {
+      font-size: 0.9em; } }
 
 .row-background {
   background-size: cover;
@@ -211,6 +226,9 @@ p {
   color: rgba(0, 0, 0, 0.7);
   font-size: 1.1em;
   font-family: sans-serif; }
+  @media screen and (max-width: 640px) {
+    .body-text {
+      width: 38vw; } }
 
 .body-text-right {
   margin-left: 10vw; }

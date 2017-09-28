@@ -15,17 +15,17 @@ var state = {
 //Load page properly if scrolled down and initiate height for elements
 $(document).ready( function() {
 
-  if($(window).width() > 500) {
+  // if($(window).width() > 500) {
     setHeight()
 
     scrollAnimation()
-  }
-
-  if($(window).width() < 500) {
-      setMobile()
-  }
-
-  console.log($(window).width())
+  // }
+  //
+  // if($(window).width() < 500) {
+  //     setMobile()
+  // }
+  //
+  // console.log($(window).width())
 
 })
 
@@ -39,9 +39,9 @@ function setHeight() {
     'min-height' : state.height / 10 + 'px'
   })
 
-  $(".body-text").css({
-    'min-width' : state.height / 3
-  })
+  // $(".body-text").css({
+  //   'min-width' : state.height / 3
+  // })
 }
 
 //Function to set mobile styling
@@ -92,6 +92,7 @@ function scrollAnimation() {
     $('#contact-bar').css({
       'position' : 'fixed',
       'top' : '0',
+      'left' : '0',
       'margin-top' : '0',
       'transform' : ''
     })
