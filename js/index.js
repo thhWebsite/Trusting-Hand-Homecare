@@ -15,11 +15,21 @@ var state = {
 //Load page properly if scrolled down and initiate height for elements
 $(document).ready( function() {
 
-  setHeight()
+  if($(window).width() > 500) {
+    setHeight()
 
-  scrollAnimation()
+    scrollAnimation()
+  }
+
+  if($(window).width() < 500) {
+      setMobile()
+  }
+
+  console.log($(window).width())
 
 })
+
+
 
 //Function to set heights for elements
 function setHeight() {
@@ -34,10 +44,31 @@ function setHeight() {
   })
 }
 
+//Function to set mobile styling
+function setMobile() {
+
+  $("#banner").css({
+    'position' : 'block'
+  })
+
+  $("#main-wrapper").css({
+    'position' : 'block',
+    'margin-bottom' : 0
+  })
+
+  $("#content").css({
+    'margin-top' : 0,
+    'position' : 'block'
+  })
+
+}
+
 //Scroll based animatinos for page
 $(window).scroll( function() {
 
-  scrollAnimation()
+  if($(window).width() > 500) {
+    scrollAnimation()
+  }
 
 })
 
