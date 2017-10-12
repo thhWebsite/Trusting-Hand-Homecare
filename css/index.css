@@ -351,7 +351,7 @@ p {
     #contact-bar {
       margin-top: 0;
       position: static;
-      height: 10vw; } }
+      min-height: 10vw; } }
 
 .contact-button {
   width: 20vw;
