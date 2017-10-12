@@ -354,10 +354,8 @@ p {
       height: 10vw; } }
 
 .contact-button {
-  width: 15vw;
-  min-width: 25vh;
-  height: 3.75vw;
-  min-height: 7.5vh;
+  width: 20vw;
+  height: 8vh;
   border: solid 2px rgba(220, 220, 220, 0.9);
   background-color: #4286f4;
   display: -webkit-box;
@@ -379,6 +377,10 @@ p {
   justify-content: center;
   cursor: pointer;
   border-radius: 10px; }
+  @media screen and (max-width: 1000px) {
+    .contact-button {
+      width: 30vw;
+      height: 80%; } }
 
 #phone-button {
   margin-left: 10%; }
