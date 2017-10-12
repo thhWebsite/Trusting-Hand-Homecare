@@ -3,76 +3,41 @@ function facebookLink() {
   window.open("https://www.facebook.com/Trusting-Hand-Homecare-1877394315841612/")
 }
 
-//object to pass sate along between functions
+//Object to pass sate along between functions
 var state = {
-  bannerHeight: $("#banner").height(),
+  bannerHeight: $('#banner').height(),
   contactBarHeight: $("#contact-bar").height(),
   row4Height: $("#row-4").height(),
   height: $(window).height(),
   width: $(window).width()
 }
 
-//Load page properly if scrolled down and initiate height for elements
+//Loading dynamic styles properly on page laod
 $(document).ready( function() {
-
-  // if($(window).width() > 500) {
-    setHeight()
-
-    scrollAnimation()
-  // }
-  //
-  // if($(window).width() < 500) {
-  //     setMobile()
-  // }
-  //
-  // console.log($(window).width())
-
-})
-
-
-
-//Function to set heights for elements
-function setHeight() {
-
-  $("#contact-bar").css({
-    'margin-top' : state.bannerHeight + 'px',
-    'min-height' : state.height / 10 + 'px'
-  })
-
-  // $(".body-text").css({
-  //   'min-width' : state.height / 3
-  // })
-}
-
-//Function to set mobile styling
-function setMobile() {
-
-  $("#banner").css({
-    'position' : 'block'
-  })
-
-  $("#main-wrapper").css({
-    'position' : 'block',
-    'margin-bottom' : 0
-  })
-
-  $("#content").css({
-    'margin-top' : 0,
-    'position' : 'block'
-  })
-
-}
-
-//Scroll based animatinos for page
-$(window).scroll( function() {
-
-  if($(window).width() > 500) {
+  if($(window).width() > 1000) {
     scrollAnimation()
   }
+})
 
+//Animating page if window is proper width
+$(window).scroll( function() {
+  if($(window).width() > 1000) {
+    scrollAnimation()
+  }
+})
+
+//Checking to see if page must be responsively changed due to resize
+$(window).resize( function() {
+  if($(window).width() > 1000) {
+    scrollAnimation()
+  }
+  if($(window).width() < 1000 && $('#contact-bar').css('margin-top') != '0px') {
+    location.reload()
+  }
 })
 
 function scrollAnimation() {
+
   //Based on scroll, will ttranslate the content div up to scroll it over the banner
   $('#content').css({
     'transform' : 'translatey(' + $(window).scrollTop()*-0.25 + 'px)'
@@ -83,8 +48,15 @@ function scrollAnimation() {
 
   //Based on scroll, will blur and scale the image
   $('#banner').css({
-    'transform' : 'scale(' + (1.1 - (0.25*($(window).scrollTop() / $(window).height()))) + ', ' + (1.1 - (0.25*($(window).scrollTop() / $(window).height()))) + ')',
+    'transform' : 'scale(' + (1 - (0.25*($(window).scrollTop() / $(window).height()))) + ', ' + (1 - (0.25*($(window).scrollTop() / $(window).height()))) + ')',
     'filter' : 'blur(' + (17*($(window).scrollTop() / $(window).height())) + 'px)'
+  })
+
+
+  //Setting height for contact bar
+  $("#contact-bar").css({
+    'margin-top' : (state.bannerHeight) * 1.1 + 'px',
+    'min-height' : state.height / 10 + 'px'
   })
 
   //Cause contact bar to stickto top of page after scrolling past

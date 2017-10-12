@@ -26,7 +26,9 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  height: 100%;
+  min-height: 100%; }
 
 a {
   text-decoration: none;
@@ -55,10 +57,13 @@ p {
   margin: 5px 0 5px 0; }
 
 #main-wrapper {
-  margin-bottom: -15.5vw;
-  overflow: hidden;
   position: absolute;
-  top: 0; }
+  top: 0;
+  border: none;
+  background-color: #828282; }
+  @media screen and (max-width: 1000px) {
+    #main-wrapper {
+      position: static; } }
 
 #banner {
   height: 25vw;
@@ -84,7 +89,6 @@ p {
   justify-content: center;
   position: fixed;
   top: 0;
-  left: calc((100vw - 100%) / 2);
   left: 0;
   font-size: 3.5em;
   background-image: url("../images/banner.jpg");
@@ -95,15 +99,12 @@ p {
   -webkit-filter: blur(0px);
   filter: blur(0px);
   cursor: default;
-  -webkit-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
   font-weight: bold;
   color: #191d2d;
   font-style: italic; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1000px) {
     #banner {
-      position: block; } }
+      position: static; } }
 
 #logo {
   width: 500px;
@@ -175,8 +176,8 @@ p {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  overflow-y: hidden;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  margin-bottom: -400px; }
 
 .content-row {
   width: 100%;
@@ -347,6 +348,10 @@ p {
   z-index: 500;
   margin-top: 25vw;
   color: #282828; }
+  @media screen and (max-width: 1000px) {
+    #contact-bar {
+      margin-top: 0;
+      position: static; } }
 
 .contact-button {
   width: 15vw;
@@ -407,6 +412,9 @@ p {
   background-color: #828282;
   color: gainsboro;
   min-height: 10vh; }
+  @media screen and (max-width: 700px) {
+    #row-4 {
+      font-size: 0.75em; } }
 
 #row-1-background {
   background-image: url("../images/row-1-background.jpg"); }
