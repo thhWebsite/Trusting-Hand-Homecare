@@ -340,9 +340,8 @@ p {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 12vw;
-  max-height: 10vh;
-  width: 100%;
+  min-height: 10vh;
+  width: 100vw;
   background-color: #e6e6e6;
   font-size: 2em;
   z-index: 500;
@@ -351,7 +350,8 @@ p {
   @media screen and (max-width: 1000px) {
     #contact-bar {
       margin-top: 0;
-      position: static; } }
+      position: static;
+      height: 10vw; } }
 
 .contact-button {
   width: 15vw;
