@@ -351,7 +351,7 @@ p {
     #contact-bar {
       margin-top: 0;
       position: static;
-      min-height: 10vw; } }
+      min-height: 12vw; } }
 
 .contact-button {
   width: 20vw;
@@ -380,7 +380,7 @@ p {
   @media screen and (max-width: 1000px) {
     .contact-button {
       width: 30vw;
-      height: 80%; } }
+      height: 10vw; } }
 
 #phone-button {
   margin-left: 10%; }
