@@ -3,6 +3,10 @@ function facebookLink() {
   window.open("https://www.facebook.com/Trusting-Hand-Homecare-1877394315841612/")
 }
 
+function instagramLink() {
+  window.open("https://www.instagram.com/trustinghandhomecare/?hl=en")
+}
+
 //Object to pass sate along between functions
 var state = {
   bannerHeight: $('#banner').height(),

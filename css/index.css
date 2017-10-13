@@ -449,7 +449,7 @@ p {
   position: absolute;
   right: 1%; }
 
-#facebook-contact-container {
+#social-media-contact-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -471,11 +471,19 @@ p {
   color: gainsboro;
   font-size: 1.5em; }
 
-#facebook-contact-icon {
+#social-media-text {
+  margin-left: -5%; }
+
+.social-media-contact-icon {
   width: 4vw;
   height: 4vw;
-  margin-left: 1%;
+  margin-left: 1.5%;
   cursor: pointer; }
+
+#instagram-contact-icon {
+  width: 4.5vw;
+  height: 4.5vw;
+  margin-left: 1.5%; }
 
 @-webkit-keyframes contact-bar-down {
   0% {
